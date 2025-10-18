@@ -1,0 +1,220 @@
+/** Start Global Rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: #EEE;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 20%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/** End Global Rules */
+
+/** Start Header Section */
+header {
+    background-color: #FAEAB1;
+}
+
+header .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/** End Header Section */
+
+/** Start Tabs Section */
+.tabs {
+    display: flex;
+    background-color: #FAF8F1;
+    font-size: 1.6rem;
+}
+
+.tabs .tab {
+    flex: 1;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.tabs .tab:hover,
+.tab.active {
+    color: black;
+    opacity: 1;
+}
+
+.tab.active {
+    border-bottom: 0.5rem solid #FAEAB1;
+}
+
+/** End Tabs Section */
+
+form {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"] {
+    width: 40%;
+    background-color: #FAEAB1;
+    padding: 1.5rem;
+    border-radius: 2rem 0 0 2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+form input[type="submit"] {
+    padding: 1rem 2rem;
+    border-radius: 0 2rem 2rem 0;
+    background-color: #183B4E;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+}
+
+form input[type="submit"]:hover {
+    background-color: #27548A;
+}
+
+form input[type="text"]::placeholder {
+    font-size: 1.6rem;
+}
+
+.tasks {
+    margin: 0 auto;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #FAEAB1;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    min-height: 10rem;
+    gap: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #F3F3E0;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.task .content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.task .content input[type="checkbox"] {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #183B4E;
+    outline: none;
+    cursor: pointer;
+}
+
+.task .content input[type="checkbox"]:checked {
+    background-color: #183B4E;
+    position: relative;
+}
+
+.task .content input[type="checkbox"]:checked::after {
+    content: '\f00c';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #FFD43B;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+}
+
+.task .content input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+}
+
+.task p {
+    font-size: 1.6rem;
+}
+
+.task .delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 0 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task .delete:hover {
+    background-color: #c82333;
+}

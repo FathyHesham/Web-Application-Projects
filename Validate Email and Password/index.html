@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Validate Email and Password</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<header>
+					<h1>Sign Up</h1>
+				</header>
+				<form action="script.js">
+					<div class="field">
+						<div class="emial-field">
+							<input
+								type="email"
+								name="email"
+								class="email"
+								placeholder="Please Enter Your Email"
+							/>
+						</div>
+						<div class="message errer-email-message">
+							<i class="fa-solid fa-circle-exclamation"></i>
+							<span>Please Enter Validate Email</span>
+						</div>
+					</div>
+					<div class="field">
+						<div class="password-field">
+							<input
+								type="password"
+								name="password"
+								class="password"
+								placeholder="Create New Password"
+							/>
+							<i class="fa-solid fa-eye-slash show-hide"></i>
+						</div>
+						<div class="message errer-password-message">
+							<i class="fa-solid fa-circle-exclamation"></i>
+							<span>
+								Please Enter At Least 8 Characters With Numbers And Symbol Of
+								Small And Captial Letter
+							</span>
+						</div>
+					</div>
+					<div class="field">
+						<div class="confirm-password-field">
+							<input
+								type="password"
+								name="confirm-password"
+								class="confirm-password"
+								placeholder="Confirm Password"
+							/>
+							<i class="fa-solid fa-eye-slash show-hide"></i>
+						</div>
+						<div class="message error-confirm-message">
+							<i class="fa-solid fa-circle-exclamation"></i>
+							<span>Password Don't Match</span>
+						</div>
+					</div>
+					<div class="submit-button">
+						<input type="submit" class="signUp" value="Sign Up Now" />
+					</div>
+				</form>
+			</div>
+		</main>
+		<!-- JavaScript Code -->
+		<script src="script.js"></script>
+	</body>
+</html>

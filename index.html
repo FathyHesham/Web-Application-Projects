@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Our Latest Projects</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 40px 20px;
+			}
+
+			.container {
+				max-width: 1200px;
+				width: 100%;
+				text-align: center;
+			}
+
+			header {
+				margin-bottom: 40px;
+			}
+
+			h1 {
+				font-size: 2.8rem;
+				margin-bottom: 15px;
+				color: #2c3e50;
+				position: relative;
+				display: inline-block;
+			}
+
+			h1:after {
+				content: "";
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 80px;
+				height: 4px;
+				background: #3498db;
+				border-radius: 2px;
+			}
+
+			.subtitle {
+				font-size: 1.2rem;
+				color: #7f8c8d;
+				max-width: 700px;
+				margin: 0 auto 20px;
+			}
+
+			.highlight {
+				display: inline-block;
+				background: rgba(52, 152, 219, 0.1);
+				color: #3498db;
+				padding: 5px 15px;
+				border-radius: 20px;
+				font-weight: 600;
+				margin-top: 10px;
+			}
+
+			.cards-container {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				justify-content: center;
+				gap: 30px;
+				margin-top: 20px;
+			}
+
+			/* Enhanced Project Card Styles */
+			.card {
+				min-width: 320px;
+				background: white;
+				border-radius: 16px;
+				overflow: hidden;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+			}
+
+			.content {
+				padding: 25px;
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.content h2 {
+				font-size: 1.5rem;
+				margin-bottom: 15px;
+				color: #2c3e50;
+			}
+
+			.tech-tag {
+				display: inline-block;
+				background: #e3f2fd;
+				color: #1976d2;
+				padding: 5px 12px;
+				border-radius: 20px;
+				font-size: 0.8rem;
+				font-weight: 600;
+				margin-bottom: 12px;
+				align-self: flex-start;
+			}
+
+			.tech-tag.html-css {
+				background: #fff3e0;
+				color: #f57c00;
+			}
+
+			.tech-tag.html-css-js {
+				background: #e8f5e9;
+				color: #388e3c;
+			}
+
+			.description {
+				color: #7f8c8d;
+				margin-bottom: 20px;
+				flex-grow: 1;
+				line-height: 1.6;
+			}
+
+			.reference {
+				display: flex;
+				gap: 15px;
+				padding: 0 25px 25px;
+			}
+
+			.btn {
+				padding: 10px 20px;
+				border: none;
+				border-radius: 30px;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				flex: 1;
+			}
+
+			.btn.demo {
+				background: #f1f2f6;
+				color: #2c3e50;
+			}
+
+			.btn.demo:hover {
+				background: #3498db;
+				color: white;
+			}
+
+			.btn {
+				background: #3498db;
+				color: white;
+			}
+
+			.btn:hover {
+				background: #2980b9;
+			}
+
+			/* New cards with descriptions */
+			.card-2 {
+				background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+			}
+
+			.card-3 {
+				background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+			}
+
+			.card-4 {
+				background: linear-gradient(135deg, #a8c8ec 0%, #d2a6ff 100%);
+			}
+
+			footer {
+				margin-top: 50px;
+				color: #7f8c8d;
+				text-align: center;
+				padding: 20px;
+				width: 100%;
+			}
+
+			@media (max-width: 768px) {
+				.cards-container {
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.card {
+					width: 100%;
+					max-width: 400px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Our Latest Projects</h1>
+				<p class="subtitle">
+					Explore our most recent work showcasing innovation, creativity, and
+					technical excellence
+				</p>
+				<div class="highlight">Latest Achievements & Milestones</div>
+			</header>
+
+			<div class="cards-container">
+				<div class="card">
+					<div class="content">
+						<h2>TO-DO List App</h2>
+						<span class="tech-tag html-css-js">HTML & CSS & JS</span>
+						<p class="description">
+							The To Do List App is a user-friendly task management tool
+							developed using HTML, CSS, and JavaScript. It enables users to
+							add, complete (via checkboxes), and delete tasks, with data saved
+							persistently in the browser's local storage. The app boasts a
+							clean interface featuring personal tabs, smooth animations, and
+							efficient organization for daily activities.
+						</p>
+					</div>
+					<div class="reference">
+						<a href="To Do List App/index.html" target="_blank">
+							<button type="button" class="btn">Demo</button>
+						</a>
+						<a
+							href="https://github.com/FathyHesham/JavaScript-Projects/tree/main/To%20Do%20List%20App"
+							target="_blank"
+						>
+							<button type="button" class="btn demo">Show Code</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="card card-2">
+					<div class="content">
+						<h2>Validate Email and Password Form</h2>
+						<span class="tech-tag html-css-js">HTML & CSS & JS</span>
+						<p class="description">
+							A modern and secure sign-up form implementation with real-time
+							email and password validation, password visibility toggle, and
+							confirmation matching using HTML, CSS, and JavaScript.
+						</p>
+					</div>
+					<div class="reference">
+						<a href="Validate Email and Password/index.html" target="_blank">
+							<button type="button" class="btn">Demo</button>
+						</a>
+						<a href="#" target="_blank">
+							<button type="button" class="btn demo">Show Code</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="content">
+						<h2>Color Theme Switcher</h2>
+						<span class="tech-tag html-css-js">HTML & CSS & JS</span>
+						<p class="description">
+							A dynamic color theme switcher that allows users to personalize
+							their experience by selecting different color schemes. The
+							selected theme persists across sessions using local storage,
+							providing a seamless and memorable user experience.
+						</p>
+					</div>
+					<div class="reference">
+						<a href="Changes Colors JS/index.html" target="_blank">
+							<button type="button" class="btn">Demo</button>
+						</a>
+						<a href="#" target="_blank">
+							<button type="button" class="btn demo">Show Code</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="card card-4">
+					<div class="content">
+						<h2>Scroll To Top Button</h2>
+						<span class="tech-tag html-css-js">HTML & CSS & JS</span>
+						<p class="description">
+							A smooth scroll-to-top button implementation that appears when
+							users scroll down the page beyond 600 pixels. The button features
+							a sleek circular design with smooth scrolling animation, providing
+							an improved user experience for long-scrolling pages.
+						</p>
+					</div>
+					<div class="reference">
+						<a href="Up Top Button/index.html" target="_blank">
+							<button type="button" class="btn">Demo</button>
+						</a>
+						<a
+							href="https://github.com/FathyHesham/JavaScript-Projects/tree/main/Up%20Top%20Button"
+							target="_blank"
+						>
+							<button type="button" class="btn demo">Show Code</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<p>🚀 Latest Projects Showcase | Innovation at its finest ✨</p>
+			<p style="margin-top: 10px">
+				👨‍💻 Created by
+				<a
+					href="https://www.linkedin.com/in/fathy-hesham-fathy/"
+					target="_blank"
+					style="color: #3498db; text-decoration: none; font-weight: 600"
+				>
+					Fathy Hesham
+				</a>
+				🌟
+			</p>
+		</footer>
+	</body>
+</html>
