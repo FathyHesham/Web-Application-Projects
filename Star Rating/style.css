@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #FFD150, #FFB253);
+}
+
+.star-rating {
+    background-color: #FFF;
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.star-rating header {
+    color: #FFD150;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.stars {
+    font-size: 2.5rem;
+}
+
+.stars i {
+    color: #E6E6E6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stars i.active {
+    color: #FF9C1A;
+}

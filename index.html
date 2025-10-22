@@ -170,7 +170,9 @@
 			.btn:hover {
 				background: #2980b9;
 			}
-
+			.card:hover {
+				transform: translateY(-10px) rotate(1deg);
+			}
 			/* New cards with descriptions */
 			.card-2 {
 				background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
@@ -183,49 +185,6 @@
 			.card-4 {
 				background: linear-gradient(135deg, #a8c8ec 0%, #d2a6ff 100%);
 			}
-
-			footer {
-				margin-top: 50px;
-				color: #7f8c8d;
-				text-align: center;
-				padding: 20px;
-				width: 100%;
-			}
-
-			@media (max-width: 768px) {
-				h1 {
-					font-size: 2rem;
-				}
-
-				.subtitle {
-					font-size: 1rem;
-					padding: 0 15px;
-				}
-
-				.card {
-					min-width: unset;
-					width: 100%;
-				}
-
-				.content {
-					padding: 20px;
-				}
-
-				.content h2 {
-					font-size: 1.3rem;
-				}
-
-				.reference {
-					padding: 0 20px 20px;
-				}
-
-				.btn {
-					padding: 8px 16px;
-					font-size: 0.9rem;
-				}
-			}
-
-			/* Add small mobile styles */
 			@media (max-width: 480px) {
 				body {
 					padding: 20px 10px;
@@ -243,6 +202,18 @@
 				.description {
 					font-size: 0.9rem;
 				}
+
+				.card-3 {
+					transform: none;
+				}
+			}
+
+			footer {
+				margin-top: 50px;
+				color: #7f8c8d;
+				text-align: center;
+				padding: 20px;
+				width: 100%;
 			}
 		</style>
 	</head>
@@ -348,6 +319,31 @@
 						</a>
 						<a
 							href="https://github.com/FathyHesham/Web-Application-Projects/tree/main/Up%20Top%20Button"
+							target="_blank"
+						>
+							<button type="button" class="btn demo">Show Code</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="card card-3">
+					<div class="content">
+						<h2>Star Rating System</h2>
+						<span class="tech-tag html-css-js">HTML & CSS & JS</span>
+						<p class="description">
+							An interactive star rating component that allows users to rate
+							items on a scale of 1-5 stars. Features include hover effects,
+							click functionality, and visual feedback. The system uses custom
+							styling for stars and smooth transitions for an engaging user
+							experience.
+						</p>
+					</div>
+					<div class="reference">
+						<a href="Star Rating/index.html" target="_blank">
+							<button type="button" class="btn">Demo</button>
+						</a>
+						<a
+							href="https://github.com/FathyHesham/Web-Application-Projects/tree/main/Star%20Rating"
 							target="_blank"
 						>
 							<button type="button" class="btn demo">Show Code</button>
