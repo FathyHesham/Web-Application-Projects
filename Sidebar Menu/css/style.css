@@ -1,0 +1,370 @@
+/* ==================== Start General Variable ====================  */
+:root {
+    /* Light Theme */
+    --color-text-primary: #1F2936;
+    --color-text-placeholder: #798EAE;
+    --color-bg-primary: #f9fafb;
+    --color-bg-secondary: #ECECFD;
+    --color-bg-sidebar: #FFFFFF;
+    --color-border-hr: #E2E8F0;
+    --color-hover-primary: #695CFE;
+    --color-hover-secondary: #e2e2fb;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme {
+    /* Dark Theme */
+    --color-text-primary: #F1F5F9;
+    --color-text-placeholder: #A6B7D2;
+    --color-bg-primary: #111827;
+    --color-bg-secondary: #3D4859;
+    --color-bg-sidebar: #1f2937;
+    --color-border-hr: #3B475C;
+    --color-hover-secondary: #48566a;
+    --color-shadow: rgba(0, 0, 0, 0.3)
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    background: var(--color-bg-primary);
+}
+
+main {
+    display: flex;
+}
+
+.sidebar {
+    background: var(--color-bg-sidebar);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 24.5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-right: 0.1rem solid var(--color-border-hr);
+    box-shadow: 0 1rem 1rem var(--color-shadow);
+    transition: width 0.4s ease;
+}
+
+.sidebar.close {
+    width: 8rem;
+}
+
+/* ==================== End General Variable ====================  */
+
+
+/* ==================== Start  Header Section ====================  */
+.sidebar-header {
+    padding: 2rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 0.1rem solid var(--color-border-hr);
+}
+
+.sidebar-header .header-logo {
+    background: var(--color-hover-primary);
+    padding: 1rem;
+    border-radius: 50% 50%;
+    transition: opacity 0.4s ease;
+}
+
+body.dark-theme .sidebar-header .header-logo {
+    color: #FFF;
+}
+
+.sidebar-header .sidebar-button-toggle,
+.navigate .sidebar-button-toggle {
+    border: none;
+    outline: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    transition: 0.4s ease;
+
+}
+
+.sidebar-header .sidebar-button-toggle:hover,
+.navigate .sidebar-button-toggle:hover {
+    background: var(--color-hover-secondary);
+}
+
+.sidebar.close .header-logo {
+    display: none;
+}
+
+.sidebar .sidebar-header .sidebar-button-toggle svg {
+    transition: transform 0.4s ease;
+}
+
+.sidebar.close .sidebar-button-toggle svg {
+    transform: rotate(180deg);
+}
+
+body.dark-theme .sidebar .sidebar-header .sidebar-button-toggle svg {
+    color: #FFF;
+}
+
+.navigate {
+    top: 0;
+    display: none;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    background: var(--color-bg-primary);
+    border-bottom: 0.1rem solid var(--color-border-hr);
+}
+
+.navigate .sidebar-button-toggle {
+    position: unset;
+}
+
+/* ==================== End  Header Section ====================  */
+
+/* ==================== Start  Body Section ====================  */
+.sidebar-content {
+    flex: 1;
+    padding: 2rem 1.8rem;
+    overflow: hidden auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-text-placeholder) transparent;
+}
+
+.sidebar.close .sidebar-content {
+    scrollbar-width: none;
+}
+
+.sidebar-content .search-form {
+    background: var(--color-bg-secondary);
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0 2rem;
+    min-height: 4.8rem;
+    padding: 0 1.5rem;
+    border-radius: 0.8rem;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+
+.sidebar.close .search-form:hover {
+    cursor: pointer;
+}
+
+.sidebar-content .search-form:focus-within,
+.sidebar.close .search-form:hover {
+    background: var(--color-hover-secondary);
+}
+
+.sidebar-content .search-form .search-icon {
+    color: var(--color-text-placeholder);
+}
+
+.sidebar-content .search-form input[type="search"] {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: none;
+    margin-left: 1.5rem;
+    color: var(--color-text-primary);
+}
+
+.sidebar-content .search-form input[type="search"]::placeholder {
+    color: var(--color-text-placeholder);
+}
+
+.sidebar-content .menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0 !important;
+}
+
+.sidebar-content .menu-list .menu-link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 1.2rem 1.5rem;
+    gap: 1.2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    color: var(--color-text-primary);
+    transition: all 0.3s ease;
+}
+
+.sidebar-content .menu-list .menu-item .menu-link .menu-label {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.close .sidebar-content .menu-link .menu-label {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-content .menu-list .menu-link:is(:hover, .active) {
+    color: #FFF;
+    background: var(--color-hover-primary);
+
+}
+
+/* ==================== End  Body Section ====================  */
+
+/* ==================== Start  Footer Section ====================  */
+.sidebar-footer {
+    padding: 2rem 1.8rem;
+    border-top: 0.1rem solid var(--color-border-hr);
+}
+
+.sidebar-footer .button-change-theme {
+    width: 100%;
+    background: var(--color-bg-secondary);
+    padding: 0 1.5rem;
+    min-height: 4.2rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    color: var(--color-text-primary);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.sidebar-footer .button-change-theme .icon-theme {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar.close .sidebar-footer .button-change-theme .icon-theme span {
+    display: none;
+}
+
+.sidebar-footer .button-change-theme .change-theme-track {
+    width: 4.5rem;
+    height: 2.3rem;
+    background: #c3d1ec;
+    border-radius: 2rem;
+    margin-left: auto;
+    position: relative;
+    transition: opacity 0.4s 0.2s ease, background-color 0.3s ease;
+}
+
+.sidebar.close .sidebar-footer .button-change-theme .change-theme-track {
+    display: none;
+}
+
+body.dark-theme .sidebar-footer .button-change-theme .change-theme-track {
+    background: #695CFE;
+}
+
+.sidebar-footer .button-change-theme .change-theme-track .change-theme-indicator {
+    background: #FFF;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+body.dark-theme .sidebar-footer .button-change-theme .change-theme-track .change-theme-indicator {
+    transform: translateX(2.1rem);
+}
+
+.sidebar-footer .button-change-theme:hover {
+    background: var(--color-hover-secondary);
+}
+
+/* ==================== End  Footer Section ====================  */
+/* ==================== Start Main Contetn ==================== */
+.main-content {
+    flex: 1;
+    padding: 3rem;
+    color: var(--color-text-primary);
+}
+
+.main-content .page-title {
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+}
+
+.main-content .card {
+    background-color: var(--color-bg-sidebar);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.9rem;
+}
+
+/* ==================== End Main Contetn ==================== */
+
+/* ==================== Start Media Query ==================== */
+@media (max-width: 768px) {
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.6);
+        transition: 0.4s ease;
+    }
+
+    body:has(.sidebar:not(.close))::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    body:has(.sidebar:not(.close)) {
+        overflow: hidden;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 20;
+        transition: left 0.4s ease;
+    }
+
+    .sidebar.close {
+        left: -27rem;
+        width: 27rem;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    .navigate {
+        display: block;
+    }
+}
+
+/* ==================== End Media Query ==================== */
